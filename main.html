@@ -9,6 +9,143 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: rgb(14, 229, 136);
+            width:500px;
+            height:300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .product{
+            background-color: white;
+            width:230px;
+            height: 240px;
+            display: flex;
+        }
+        .photo-main{
+            background-color: rgb(27, 212, 27);
+            width:120px;
+            height: 169px;
+        }
+        .product__photo{
+            box-shadow: -2px 0px 5px 1px rgba(0, 0, 0, 0.2);
+            margin-top: 15px;
+            width: 120px;
+            height: 206px;
+            position: relative;
+            right: 17px;
+            background-color: white;
+        }
+        .photo-main >img{
+            height:120px;
+            position: relative;
+            right: 28px;
+        }
+        .photo-album > ul{
+            padding-left: 30px;
+            margin-top:10px;
+            margin-bottom: 10px;
+        }
+        .photo-album > ul > li{
+            list-style-type:none;
+            display: inline;
+        }
+        .photo-album > ul > li > img{
+            height: 15px;
+            border: 1px solid lightgray;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        #share{
+            position: relative;
+            color: white;
+            left:3px;
+        }
+        #heart{
+            position: relative;
+            left:95px;
+        }
+        .title h1{
+            font-size: 10px;
+            margin-bottom: 0;
+        }
+        .title span{
+            font-size: 5px;
+            color:rgb(145, 144, 144);
+            margin-top: 0;
+            position: relative;
+            top: -6px;
+        }
+        .product__info{
+            margin-top: 15px;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            right: 20px;
+        }
+        .price{
+            font-size: 7px;
+            color: red;
+        }
+        .price span{
+            font-size: 30px;
+        }
+        .variant h3{
+            color:rgb(145, 144, 144);
+            font-size: 5px;
+        }
+        .variant ul{
+            padding-left: 10px;
+            margin: 0px;
+        }
+        .variant ul > li{
+            list-style-type: none;
+            display: inline;
+        }
+        .variant ul > li >img{
+            height: 15px;
+        }
+        .variant ul > li >img:hover{
+            border: 1px solid lightgray;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .description h5{
+            color:rgb(145, 144, 144);
+            font-size: 5px;
+        }
+        .description ul{
+            padding-left: 13px;
+            margin-top: 0px;
+        }
+        .description ul>li{
+            font-size: 5px;
+            font-weight: bold;
+        }
+        #cart{
+            font-size: 6px;
+            width: 70px;
+            padding-top:7px;
+            padding-bottom: 7px;
+            background-color: rgb(245, 2, 2);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+        }
+        #cart:hover{
+            background-color: rgb(156, 42, 42);
+        }
+        #cart:active{
+            background-color: rgb(96, 17, 17);
+        }
+    </style>
 </head>
 
 <body>
@@ -17,14 +154,14 @@
 			<div class="photo-container">
 				<div class="photo-main">
 					<div class="controls">
-						<i class="fa fa-share-alt"></i>
-						<i class="fa fa-heart-o"></i>
+						<i id="share" class="fa-solid fa-share-nodes fa-2xs"></i>
+						<i id="heart" class="fa-regular fa-heart fa-2xs" style="color: #ffffff;"></i>
 					</div>
 					<img src="https://res.cloudinary.com/john-mantas/image/upload/v1537291846/codepen/delicious-apples/green-apple-with-slice.png"
 						alt="green apple slice">
 				</div>
 				<div class="photo-album">
-					<ul>
+					<ul >
 						<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png"
 								alt="green apple"></li>
 						<li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537303532/codepen/delicious-apples/half-apple.png"
@@ -59,8 +196,15 @@
 				</ul>
 			</div>
 			<div class="description">
-				
+				<h5>BENEFITS</h5>
+				<ul>
+					<li>Apples are nutricious</li>
+					<li>Apples may be good for weight loss</li>
+					<li>Apples may be good for bone health</li>
+					<li>They're linked to the lowest risk of diabetes</li>
+				</ul>
 			</div>
+			<button type="button" id="cart">ADD TO CART</button>
 		</div>
 	</section>
 </body>
